@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grocery</title>
+        <link rel="stylesheet" href="css/raw.css">
+       
+        
+                
+
+
+   </head>
+   <body>
+
+    <div class="header">
+        <div class="h1 image">
+            <img width="80px" height="80px" src="images/logo.png"/>
+        </div>
+       
+        <h1>Online Grocery Store</h1>
+        
+
+            <div class="topmenu">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="catalogue.html">Catalogue</a>
+                <a class="active" href="home.html">Home</a>
+                
+            </div>
+
+    </div>
+
+    <div class="menuitem" >
+        
+        <div class="item one" onclick="activateNav(this)">
+            <i class="one"></i>
+        
+            <div class="dropdown">
+                <button class="dropbtn"><img src="https://img.icons8.com/ios/50/null/kawaii-french-fries.png"/>Frozen Food</button>
+                
+                <div id="frozen" class="dropdown-content">
+                    <button class="btn" onclick="ShowAndHide('SectionName1')">Meats</button>
+                    <button class="btn" onclick="ShowAndHide('SectionName2')">Pizza</button>
+                    <button class="btn" onclick="ShowAndHide('SectionName3')">Ice Cream</button>
+                 </div>
+            </div>
+
+        </div>
+        
+
+        <div class="item two" onclick="activateNav(this)">
+            <i class="two"></i>
+
+            <div class="dropdown">
+                <button class="dropbtn"> <img src="https://img.icons8.com/ios/50/null/kawaii-egg.png"/>Fresh Food</button>
+                <div class="dropdown-content" id="fresh">
+                    <button class="btn" onclick="ShowAndHide('SectionName4')">Fruits</button>
+                    <button class="btn" onclick="ShowAndHide('SectionName5')">Vegetables</button>
+                    <button class="btn" onclick="ShowAndHide('SectionName6')">Dairy</button>
+                 </div>
+            </div>
+        </div>
+
+        <div class="item three" onclick="activateNav(this)">
+            <i class="three"></i>
+            <div class="dropdown">
+                <button class="dropbtn"><img src="https://img.icons8.com/ios/50/null/kawaii-coffee.png"/>Beverages</button>
+                <div class="dropdown-content" id="drinks">
+                    <button class="btn" onclick="ShowAndHide('SectionName7')">Soft Drinks</button>
+                    <button class="btn" onclick="ShowAndHide('SectionName8')">Coffee</button>
+                    <button class="btn" onclick="ShowAndHide('SectionName9')">Shakes</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="item four" onclick="activateNav(this)">
+            <i class="four"></i>
+            <div class="dropdown">
+                <button class="dropbtn"><img src="https://img.icons8.com/ios/50/null/kawaii-milk.png"/>Home Health</button>
+                    <div class="dropdown-content" id="medicine">
+                        <button class="btn" onclick="ShowAndHide('SectionName10')">Liquids</button>
+                        <button class="btn" onclick="ShowAndHide('SectionName11')">Tablets</button>
+                    </div>
+            </div>
+        </div>
+
+        <div class="item five" onclick="activateNav(this)">
+            <i class="five"></i>
+            <div class="dropdown">
+         
+            <button class="dropbtn"><img src="https://img.icons8.com/ios/50/null/kawaii-shellfish.png"/>Pet Food</button>
+                <div class="dropdown-content" id="dog">
+                    <button class="btn" onclick="ShowAndHide('SectionName12')">Dog Food</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+    
+    
+    <div class="main">
+       
+        <div class="search">
+            <button id="sbutton">Search</button>
+            <input type="search" id="query" name="q" placeholder="Search for a product...">
+            
+
+        </div>
+        <table border="0px" align="center" height="500" width="1000">
+
+
+            <tr>
+            <td>
+            
+                <div id="SectionName1" style="display: none"> 
+                
+                </br>
+                <div class="card1" id="items">
+
+                    <div class="item image">
+                        <a href="https://www.meatemporium.com.au/collections/everyday-value-beef">
+                            <img src="images/beef.png" width="170px" height="100px"/>
+                        </a>
+                    </div>
+                    <h1 id="item1">Beef</h1>
+                    <p class="price">$7.50/kg</p>
+                    <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item1', 7.50)">
+                    
+
+                    <div class="item image">
+                        <a href="https://butchersstore.com.au/buy-meat-online/quality-chicken/">
+                            <img src="images/chicken.png" width="180px" height="100px"/>
+                        </a>
+                    </div>
+                    <h1 id="item2">Chicken</h1>
+                    <p class="price">$7.50/kg</p>
+                    <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 7 In stock</p>
+                    <input type="button" value="Add to Cart" onclick="AddItem('item2', 7.50)">
+                
+                    <div class="item image">
+                        <a href="https://www.meatemporium.com.au/collections/pork">
+                            <img src="images/ham.png" width="170px" height="100px"/>
+                        </a>
+                    </div>
+                    <h1 id="item3">Pork</h1>
+                    <p class="price">$7.50/kg</p>
+                    <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 11 In stock</p>
+                    <input type="button" value="Add to Cart" onclick="AddItem('item3', 7.50)">
+                    
+                </div>
+                
+            </br>
+
+                
+                 
+
+
+                </div>
+    
+            </td>
+                </tr>
+            <tr>
+                <td>
+                    <div id="SectionName2" style="display:none">
+                
+                   
+                    <div class="card2" id="items">
+                        <div class="item image">
+                          <a href="https://www.deliciousmagazine.co.uk/recipes/pepperoni-pizza/">
+                            <img src="images/peppa.png" width="190px" height="100px"/>
+                          </a>
+                        </div>
+                        <h1 id="item4">Pepperoni Pizza</h1>
+                        <p class="price">Regular Size: $7.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item4', 7.50)">
+                        
+                        <div class="item image">
+                          <a href="https://myfoodbook.com.au/recipes/show/hawaiian-pizza-1">
+                            <img src="images/hawaii.png" width="170px" height="100px"/>
+                          </a>
+                        </div>
+                        <h1 id="item5">Hawaiian Pizza</h1>
+                        <p class="price">Regular Size: $8.00</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 7 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item5', 8.00)">
+                        
+                        <div class="item image">
+                          <a href="https://www.foodandwine.com/recipes/classic-cheese-pizza">
+                            <img src="images/cheese.png" width="170px" height="100px"/>
+                          </a>
+                        </div>
+                        <h1 id="item6">Cheese Pizza</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 8 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item6', 5.50)">
+                      </div>
+                      
+                    </br>
+                
+                
+                </div>
+                
+                </td>
+        
+            </tr>
+            <tr>
+                 <td><div id="SectionName3"  style="display:none">
+                    <div class="card3" id="items">
+                        <div class="item image">
+                          <a href="https://www.bbcgoodfood.com/recipes/ultimate-vanilla-ice-cream">
+                            <img src="images/vanilla.png" width="155px" height="160px"/>
+                          </a>
+                        </div>
+                        <h1 id="item7">Vanilla Ice Cream</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 12 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item7', 5.50)">
+                      
+                        <div class="item image">
+                          <a href="https://joyfoodsunshine.com/chocolate-ice-cream/">
+                            <img src="images/choc.png" width="220px" height="140px"/>
+                          </a>
+                        </div>
+                        <h1 id="item8">Chocolate Ice Cream</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item8', 5.50)">
+                      
+                        <div class="item image">
+                          <a href="https://www.recipetineats.com/strawberry-ice-cream-no-churn/">
+                            <img src="images/straw.png" width="180px" height="130px"/>
+                          </a>
+                        </div>
+                        <h1 id="item9">Strawberry Ice Cream</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 7 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item9', 5.50)">
+                      </div>
+                      
+                    </br>
+                
+       
+                </div>
+                
+                
+                
+                </td>
+              </tr>
+              <tr>
+              
+                <td><div id="SectionName4" style="display:none">
+                   
+                  
+                    <div class="card4" id="items">
+                        <div class="item image">
+                            <a href="https://www.harrisfarm.com.au/collections/fruit">
+                                <img src="images/apple.png" width="215px" height="180px"/>
+                            </a>
+                        </div>
+                        <h1 id="item10">Apple</h1>
+                        <p class="price">$3.50/kg</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 8 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item10', 3.50)">
+                        <div class="item image">
+                            <a href="https://www.harrisfarm.com.au/collections/bananas">
+                                <img src="images/banana.png" width="210px" height="170px"/>
+                            </a>
+                        </div>
+                        <h1 id="item11">Banana</h1>
+                        <p class="price">$4.50/kg</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 8 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item11', 4.50)">
+                        <div class="item image">
+                            <a href="https://www.harrisfarm.com.au/collections/grapes">
+                                <img src="images/grape.png" width="200px" height="150px"/>
+                            </a>
+                        </div>
+                        <h1 id="item12">Grapes</h1>
+                        <p class="price">$6.50/kg</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item12', 6.50)">
+                    </div>
+                    
+                    </br>
+                
+                </div>
+            </td>
+             </tr>
+             <tr>
+                <td><div id="SectionName5"  style="display:none">
+
+                    <div class="card5" id="items">
+                        <div class="item image">
+                            <a href="https://lettucedeliver.com.au/">
+                        <img src="images/lettuce.png" width="200px" height="150px"/></a>
+                            </div>
+                        <h1 id="item13">Lettuce</h1>
+                        <p class="price">$7.50/kg</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 10 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item13', 7.50)">
+                        <div class="item image">
+                            <a href="https://www.harrisfarm.com.au/products/corn-each-1720">
+                        <img src="images/corn.png" width="200px" height="150px"/></a>
+                           </div>
+                        <h1 id="item14">Corns</h1>
+                        <p class="price">$5.50/kg</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item14', 5.50)">
+                        <div class="item image">
+                            <a href="https://www.harrisfarm.com.au/search?q=tomato">
+                        <img src="images/tomato.png" width="190px" height="150px"/></a>
+                             </div>
+                        <h1 id="item15">Tomato</h1>
+                        <p class="price">$5.50/kg</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 11 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item15', 5.50)">
+                         </div>
+                    </br>
+                
+                
+                </div>
+            
+            </td>
+             </tr>
+             <tr>
+                <td><div id="SectionName6"  style="display:none">
+
+                    <div class="card6" id="items">
+                        <div class="item image">
+                            <a href="https://www.coles.com.au/browse/dairy-eggs-fridge/cheese/sliced-cheese">
+                        <img src="images/sliced.png" width="210px" height="140px"/></a>
+                            </div>
+                        <h1 id="item16">Sliced Cheese</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 7 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item16', 5.50)">
+                        <div class="item image">
+                            <a href="https://www.pauls.com.au/products/milk/full-cream/">
+                        <img src="images/milk.png" width="140px" height="180px"/></a>
+                           </div>
+                        <h1 id="item17">Full Cream Milk</h1>
+                        <p class="price">2 Litres: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 11 In stock</p>
+                        <input type="button" value="Add to Cart" onclick="AddItem('item17', 5.50)">
+                        <div class="item image">
+                            <a href="https://www.mocofoodservices.com.au/dairy--eggs/cream/cream-whipped-aerosol/">
+                        <img src="images/cream.png" width="100px" height="190px"/></a>
+                             </div>
+                        <h1 id="item18">Whipped Cream</h1>
+                        <p class="price">Regular Size: $4.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 10 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item18', 4.50)">
+                         </div>
+                    </br>
+         
+                </div>
+            
+            </td>
+             </tr>
+             <tr>
+        
+                <td><div id="SectionName7"  style="display:none">
+                
+                    <div class="card7" id="items">
+                        <div class="item image">
+                            <a href="https://www.bigw.com.au/brands/coca-cola">
+                        <img src="images/coke.png" width="150px" height="150px"/></a>
+                            </div>
+                        <h1 id="item19">Coca Cola</h1>
+                        <p class="price">24 Pack: $25.00</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 20 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item19', 25.00)">
+                        <div class="item image">
+                            <a href="https://shortysliquor.com.au/fanta-orange-24-x-375ml-cans">
+                        <img src="images/fanta.png" width="150px" height="150px"/></a>
+                           </div>
+                        <h1 id="item20">Fanta Orange</h1>
+                        <p class="price">10 Pack: $10.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 12 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item20', 10.50)">
+                        <div class="item image">
+                            <a href="https://www.bigw.com.au/product/sprite-cans-375ml-24-pack/p/370739">
+                        <img src="images/sprite.png" width="150px" height="150px"/></a>
+                             </div>
+                        <h1 id="item21">Sprite Lemonade</h1>
+                        <p class="price">10 Pack: $10.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 16 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item21', 10.50)">
+                         </div>
+                    </br>
+        
+                    </div
+                
+                ></td>
+             </tr>
+             <tr>
+                <td><div id="SectionName8" style="display:none">
+                
+                    <div class="card8" id="items">
+                        <div class="item image">
+                            <a href="https://www.bbcgoodfood.com/recipes/mocha">
+                        <img src="images/mocha.png" width="150px" height="150px"/></a>
+                            </div>
+                        <h1 id="item22">Mocha Coffee</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item22', 5.50)">
+                        <div class="item image">
+                            <a href="https://byronbaycoffeeco.com.au/product-category/espresso-coffee/">
+                        <img src="images/espresso.png" width="150px" height="150px"/></a>
+                           </div>
+                        <h1 id="item23">Espresso Coffee</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 10 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item23', 5.50)">
+                        <div class="item image">
+                            <a href="https://www.bbcgoodfood.com/recipes/latte">
+                        <img src="images/lattee.png" width="150px" height="150px"/></a>
+                             </div>
+                        <h1 id="item24">Latte Coffee</h1>
+                        <p class="price">Regular Size: $4.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 12 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item24', 4.50)">
+                         </div>
+                    </br>
+                
+                
+                </div>
+            
+            </td>
+             </tr>
+             <tr>
+                <td><div id="SectionName9"  style="display:none">
+                    <div class="card9" id="items">
+                        <div class="item image">
+                            <a href="https://www.marthastewart.com/349895/coffee-frappe">
+                        <img src="images/coffee.png" width="100px" height="140px"/></a>
+                            </div>
+                        <h1 id="item25">Ice Coffee Frappe</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 10 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item25', 5.50)">
+                        <div class="item image">
+                            <a href="https://simplyblendedsmoothies.com/chocolate-frappe/">
+                        <img src="images/chocfrap.png" width="90px" height="140px"/></a>
+                           </div>
+                        <h1 id="item26">Ice Chocolate Frappe</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item26', 5.50)">
+                        <div class="item image">
+                            <a href="https://www.mcdonalds.com/us/en-us/product/frappe-caramel-small.html">
+                        <img src="images/caramel.png" width="70px" height="140px"/></a>
+                             </div>
+                        <h1 id="item27">Ice Caramel Frappe</h1>
+                        <p class="price">Regular Size: $5.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 11 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item27', 5.50)">
+                         </div>
+                    </br>
+             
+                </div>
+            
+            </td>
+             </tr>
+             <tr>
+                
+                <td><div id="SectionName10" style="display:none">
+                
+                    <div class="card10" id="items">
+                        <div class="item image">
+                            <a href="https://www.bloomsthechemist.com.au/nurofen-for-children-3months-5years-pain-and-fever-relief-100mg-5ml-ibuprofen-orange-100ml/">
+                        <img src="images/nuro.png" width="130px" height="165px"/></a>
+                            </div>
+                        <h1 id="item28">Nurofen For Children Baby 3+</h1>
+                        <p class="price">200mg/5ml: $15.00</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 8 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item28', 15.00)">
+                        <div class="item image">
+                            <a href="https://www.claritin.com/products/childrens-claritin/syrup-24hr">
+                        <img src="images/clar.png" width="150px" height="150px"/></a>
+                           </div>
+                        <h1 id="item29">Claritin Syrup</h1>
+                        <p class="price">240ml: $18.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item29', 18.50)">
+                    
+                    </br>
+                </div>
+            
+                </td>
+             </tr>
+             <tr>
+                <td><div id="SectionName11" style="display:none">
+                
+                    <div class="card11" id="items">
+                        <div class="item image">
+                            <a href="https://www.amcal.com.au/nurofen-zavance---24-caplets-p-9300631742975">
+                        <img src="images/zava.png" width="160px" height="160px"/></a>
+                            </div>
+                        <h1 id="item30">Nurofen Zavance 256mg</h1>
+                        <p class="price">24 Tablets: $7.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 8 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item30', 7.50)">
+                        <div class="item image">
+                            <a href="https://www.claritin.com/products/claritin/tablets-24hr">
+                        <img src="images/tin.png" width="160px" height="150px"/></a>
+                           </div>
+                        <h1 id="item31">Claritin Allergies 5mg</h1>
+                        <p class="price">30 Tablets: $25.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 9 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item31', 25.50)">
+                    
+                 
+                    </br>
+                </div>
+            </td>
+             </tr>
+             <tr>
+             
+                <td><div id="SectionName12" style="display:none">
+                    
+                    <div class="card12" id="items">
+                        <div class="item image">
+                            <a href="https://www.bigw.com.au/product/purina-lucky-dog-roast-chicken-vegetables-pasta-dry-dog-food-8kg/p/790672">
+                        <img src="images/dog.png" width="150px" height="150px"/></a>
+                            </div>
+                        <h1 id="item32">Purina Lucky Dog Roast Chicken</h1>
+                        <p class="price">8kg: $22.50</p>
+                        <p class="quantity"><img src="images/dot.png" width="13px" height="12px"> 10 In stock</p>
+                        <input type="button" value="Add to Cart"  onclick="AddItem('item32', 22.50)">
+                       
+                    </br>
+               
+                </div>
+            </td>
+             </tr>
+             
+    
+            <tr>
+
+                <td>
+                    
+                    
+
+
+
+
+
+                </td>
+
+
+            </tr>
+
+            
+            </table> 
+
+    </div>
+       
+
+
+
+        <div class="bottom-right">
+
+
+            <table border="0px" height="50" width="333">
+
+                <td>
+                    
+                    <div id="cart">
+                        <h2>Shopping Cart</h2>
+                        <ul id="cart-items"></ul>
+                        <p>Total Items: <span id="total-items"></span></p>
+                        <p>Total: $<span id="cart-total">0</span></p>
+                        <button id="remove-all-button" onclick="removeAllItems()">Empty Cart</button>
+                        <button id="checkout-button" disabled>Checkout</button>
+                      </div>
+
+
+
+                </td>
+
+
+
+            </table>
+
+
+
+
+        </div>
+
+
+    </body>
+
+    <script src="js/script.js"></script>
+     
+        <script src="js/display.js"></script>
+
+
+
+    <SCRIPT>
+      
+    
+       
+        
+
+        </SCRIPT>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" href="css/cart.css">
+        
+
+
+
+   </head>
+   <body>
+
+    
+    <div class="Cart-Container">
+        <div class="Header">
+        <h3 class="Heading">Shopping Cart</h3>
+       
+        <div id="cart-items-list"></div>
+            <p>Total Items: <span class="total-cart" id="cart-items">0</span></p>
+            <p>Total Price: $<span id="cart-total">0.00</span></p>
+        </div>
+
+      
+            
+           
+          
+        </div>
+
+        <div class="checkout">
+            <button class="button" type="button" onclick="Checkout()">Checkout</button></a>
+            <button class="button" id="empty-cart-button">Empty Cart</button>
+        </div>
+       
+
+        
+    </body>
+    <script src="js/cartscript.js"></script>
+
+    <SCRIPT>
+
+  
+
+var products = [
+    {name:"Beef", price: 7.50, quantitiy:5},
+    {name:"Chicken", price: 7.50, quantitiy:2},
+    {name:"Pork", price: 7.50, quantitiy:9},
+    {name:"Pepparoni Pizza", price: 7.50, quantitiy:5},
+    {name:"Hawaiian Pizza", price: 8, quantitiy:2},
+    {name:"Cheese Pizza", price: 5.50, quantitiy:9},
+    {name:"Vanilla Ice Cream", price: 5.50, quantitiy:5},
+    {name:"Chocolate Ice Cream", price: 5.50, quantitiy:2},
+    {name:"Strawberry Ice Cream", price: 5.50, quantitiy:9},
+    {name:"Apple", price: 3.50, quantitiy:5},
+    {name:"Banana", price: 4.50, quantitiy:2},
+    {name:"Grapes", price: 6.50, quantitiy:9},
+    {name:"Lettuce", price: 7.50, quantitiy:5},
+    {name:"Corn", price: 5.50, quantitiy:2},
+    {name:"Tomato", price: 5.50, quantitiy:9},
+    {name:"Slice Cheese", price: 3.50, quantitiy:5},
+    {name:"Full Cream Milk", price: 5.50, quantitiy:2},
+    {name:"Whip Cream", price: 4.50, quantitiy:9},
+    {name:"Coca Cola", price: 25.50, quantitiy:5},
+    {name:"Fanta Orange", price: 10.50, quantitiy:2},
+    {name:"Sprite Lemonade", price: 10.50, quantitiy:9},
+    {name:"Mocha", price: 5.50, quantitiy:5},
+    {name:"Espresso", price: 5.50, quantitiy:2},
+    {name:"Latte", price: 4.50, quantitiy:9},
+    {name:"Ice Coffee Frappe", price: 5.50, quantitiy:5},
+    {name:"Ice Chocolate Frappe", price: 5.50, quantitiy:2},
+    {name:"Ice Caramel Frappe", price: 5.50, quantitiy:9},
+    {name:"Nurofen For Children Baby 3+", price: 15.00, quantitiy:5},
+    {name:"Claritin Syrup", price: 18.50, quantitiy:2},
+    {name:"Nurofen Zavance 256mg", price: 7.50, quantitiy:9},
+    {name:"Claritin Allergies 5mg", price: 25.50, quantitiy: 3},
+    {name:"Purina Lucky Dog", price: 22.50, quantitiy:4},
+    
+];
+
+
+
+var shoppingCart = (function() {
+
+    var itemcart = [];
+
+
+    function Item(name, price, count) {
+        this.name = name;
+        this.price = price;
+        this.count = quantitiy;
+      }
+    
+      function saveCart() {
+        sessionStorage.setItem('shoppingCart', JSON.stringify(itemcart));
+      }
+      
+    
+       var obj = {};
+      
+      // Add to cart
+      itemcart.addItemToCart = function(name, price, count) {
+        for(var item in cart) {
+          if(cart[item].name === name) {
+            cart[item].count ++;
+            saveCart();
+            return;
+          }
+        }
+        var item = new Item(name, price, count);
+        cart.push(item);
+        saveCart();
+       
+      }
+
+});
+
+        function RemoveAll(){
+            
+        }
+
+        function Checkout(){
+           return window.open("checkout.html", width="250px", height="250px");
+        }
+
+
+    </SCRIPT>
+
+

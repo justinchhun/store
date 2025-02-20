@@ -1,0 +1,73 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" href="css/check.css">
+                
+
+
+   </head>
+   <body>
+
+    
+    <div class="Cart-Container">
+        <div class="Header">
+        <h1 class="HeadingCheck">Checkout</h1>
+        </div>
+    
+    </br>
+       
+    <div class="form">
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+         <input id="fname" name="fname" type="text" placeholder="First Name*">
+         <input id="lname" name="lname" type="text" placeholder="Last Name*"/>
+          <input id="addy" name="address" type="text" placeholder="Address*"/>
+          <input id="suburb" name="suburb" type="text" placeholder="Suburb*"/>
+          <input id="state" name="state" type="text" placeholder="State*"/>
+          <input id="country" name="country" type="text" placeholder="Country*"/>
+          <input id="email" nane="email" type="text" placeholder="Email Address*"/>
+    
+          <button name="submit" class="but" type="submit" >Place Order</button>
+        </form>
+        </div>
+
+
+
+    
+    <SCRIPT>
+
+        
+    var fname = document.getElementById("fname");
+    var lname = document.getElementById("lname");
+    var address = document.getElementById("addy")
+    var suburb = document.getElementById("suburb");
+    var state = document.getElementById("state");
+    var country = document.getElementById("country");
+    var email = document.getElementById("email");
+   
+   
+    function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+        var y = document.forms["myForm"]["lname"].value;
+        var z = document.forms["myForm"]["address"].value;
+        var a = document.forms["myForm"]["suburb"].value;
+        var b = document.forms["myForm"]["state"].value;
+        var c = document.forms["myForm"]["country"].value;
+        var d = document.forms["myForm"]["email"].value;
+        if ((x == "")|| (y == "") || (z == "") || (a == "") || (b == "") || (c == "") || (d == "")) {
+            alert("All fields must be filled out");
+            event.preventDefault();
+        }
+        else {
+            window.location.href("confirmation.html");
+            
+        }
+     
+}
+
+
+    </SCRIPT>
+
